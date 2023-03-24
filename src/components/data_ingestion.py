@@ -25,7 +25,7 @@ class DataIngestion:
             
             
     def initiate_data_ingestion(self):
-        logging.info("Enetred Data ingestion component")
+        logging.info("Enetring Data ingestion component")
             
         try:
             df = pd.read_csv("notebooks\data\student_data.csv")
@@ -35,7 +35,7 @@ class DataIngestion:
             
             df.to_csv(self.ingestion_config.raw_data_path, index=False, header = True)
             
-            logging.info("Train and splitting of Data is initiated")
+            logging.info("Train and splitting of Data is been initiated")
             
             train_set, test_set = train_test_split(df, test_size =0.2, random_state=42)
             
