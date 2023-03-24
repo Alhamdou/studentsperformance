@@ -19,38 +19,37 @@ class DataIngestionConfig():
     test_data_path = str=os.path.join("artifacts", "test.csv")
     raw_data_path = str=os.path.join("artifacts", "data.csv")
     
-    
-    class DataIngestion:
-        def __init__(self):
+class DataIngestion:
+    def __init__(self):
             self.ingestion_config= DataIngestionConfig()
             
             
-        def initiate_data_ingestion(self):
-            logging.info("Enetred Data ingestion component")
+    def initiate_data_ingestion(self):
+        logging.info("Enetred Data ingestion component")
             
-            try:
-                df = pd.read_csv("notebooks\data\student_data.csv")
-                logging.info("Read data in datafram format")
+        try:
+            df = pd.read_csv("notebooks\data\student_data.csv")
+            logging.info("Read data in datafram format")
 
-                os.makedirs(os.path.dirname(self,ingestion_congfig.train_data_path), exist_ok= True)    
+            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok= True)    
+            
+            df.to_csv(self.ingestion_config.raw_data_path, index=False, header = True)
+            
+            logging.info("Train and splitting of Data is initiated")
+            
+            train_set, test_set = train_test_split(df, test_size =0.2, random_state=42)
+            
+            train_set.to_csv(self.ingestion_config.train_data_path, index=False, header= True)
+            test_set.to_csv(self.ingestion_config.test_data_path, index= False, header= True)
+            logging.info("Ingestion of data completed")
+            
+            return (
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
                 
-                df.to_csv(self.ingestion_config.raw_data_path, index=False, header = True)
-                
-                logging.info("Train and splitting of Data is initiated")
-                
-                train_set, test_set = train_test_split(df, test_size =0.2, random_state=42)
-                
-                train_set.to_csv(self.ingestion_config.train_data_path, index=Flase, header= True)
-                test_set.to_csv(self.ingestion_config.test_dat_path, index= False, header= True)
-                logging.info("Ingestion of data completed")
-                
-                return (
-                    self.ingestion.config.train_data_path,
-                    self.ingestion.config.test_data_path
-                )
-                
-            except Exception as e:
-                raise CustomException(e,sys)
+        except Exception as e:
+                raise CustomException(e, sys)
                 
 
 if __name__=="__main__":
