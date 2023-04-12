@@ -129,6 +129,6 @@ class DataTransformation:
             raise CustomException(e,sys)
 
 
-if __name__=="__main__":
-    trans=DataTransformation()
-    trans.initiate_data_transformation() 
+# if __name__=="__main__":
+#     trans=DataTransformation()
+#     trans.initiate_data_transformation() 
