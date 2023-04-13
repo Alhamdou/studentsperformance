@@ -1,8 +1,15 @@
-<html>
-<body>
-    <div class="login">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/home.css">
     
-   
+<body>
+    
+    <div class="login">
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
             <legend>Student Exam Performance Prediction</legend>
@@ -93,7 +100,7 @@
         <div class="mb-3">
             <label class="form-label">Writing Score out of 100</label>
             <input class="form-control" type="number" name="reading_score"
-                placeholder="Enter your Reading score" min='0' max='100' />
+                placeholder="Enter your Writing score" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Reading Score out of 100</label>
@@ -105,7 +112,9 @@
         </div>
     </form>
     <h2>
-       THE  prediction is {{results}}
+       The Predicted Results is: {{results}}
     </h2>
-   <body>
+ 
+    
+</body>
 </html>

@@ -1,0 +1,86 @@
+/* Style for body */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for form container */
+  .login {
+    width: 50%;
+    margin: auto;
+  }
+  
+  /* Style for form header */
+  legend {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Style for form fields */
+  .mb-3 {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    height: 45px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #01060a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Style for form button */
+  .btn-primary {
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+    display: block;
+    margin: 0  auto;
+    color: #fff;
+    background-color: #f2022a;
+    border-color: #ff0000;
+    border-radius: 0.25rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #f2022a;
+    border-color: #f2022a;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  
+  .btn-primary:active {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+  
+  /* Style for result */
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
